@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+samples/
+*.exe
+*.dll
+*.zip
+*.7z
+*.rar
+*.eml.raw
+scratch/
+notes.md
+WORKFLOW.md

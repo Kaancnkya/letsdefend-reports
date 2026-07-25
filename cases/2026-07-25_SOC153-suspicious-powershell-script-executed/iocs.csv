@@ -1,0 +1,13 @@
+indicator,type,verdict,source,notes
+db8be06ba6d2d3595dd0c86654a48cfc4c0c5408fdd3f4e1eaf342ac7a2479d0,sha256,malicious,VirusTotal 35/62,trojan.powershell/boxter; downloader/dropper; azorult family label
+payload_1.ps1,filename,malicious,endpoint alert,C:\Users\LetsDefend\Downloads\; same hash appears on VirusTotal as agent3.ps1
+agent3.ps1,filename,malicious,VirusTotal,alternate name for the same hash
+https://kionagranada.com/upload/beauty.exe,url,malicious,VirusTotal 9/98,second-stage payload fetched by the script (HTTP 200 in sandbox)
+kionagranada.com,domain,malicious,VirusTotal relations,created 2022-02-23 GoDaddy; likely compromised legitimate site
+200.234.225.9,ipv4,suspicious,VirusTotal relations,AS49635 Spain; resolves kionagranada.com
+161.22.46.148,ipv4,malicious,VirusTotal relations + Sysmon Event 22 on host,AS49635 Spain; kionagranada.com resolved to this IP by powershell.exe at 17:23:46
+beauty.exe,filename,unknown,VirusTotal relations,second-stage binary seen in sandbox; hash not yet obtained
+https://kionagranada.com/upload/sd2.ps1,url,malicious,Windows Event 4104 on host,fetched and executed in memory via IEX(IWR ...) on 172.16.17.206
+https://files-ld.s3.us-east-2.amazonaws.com/payload_1.ps1,url,malicious,browser history on host,delivery URL; user downloaded the first-stage script at 17:22:25
+Tony,hostname,affected,LetsDefend alert,script executed; EDR action = Detected (not blocked)
+172.16.17.206,ipv4-internal,affected,LetsDefend alert,host address of Tony
