@@ -1,0 +1,13 @@
+indicator,type,verdict,source,notes
+update@windows-update.site,email-sender,malicious,LetsDefend alert,phishing sender impersonating Microsoft
+132.232.40.201,ipv4,malicious,VirusTotal 3/91,sending SMTP server; AS45090 Tencent CN; passive DNS shows several Microsoft-themed typosquat domains
+windows-update.site,domain,malicious,VirusTotal 11/92,lure page hosting the ClickFix script
+https://windows-update.site/,url,malicious,browser history and proxy log,clicked from webmail at 23:26:08
+overcoatpassably.shop,domain,malicious,VirusTotal 13/91,second-stage host; DNS on Cloudflare
+https://overcoatpassably.shop/Z8UZbPyVpGfdRS/maloy.mp4,url,malicious,firewall log,HTA payload fetched by mshta.exe; GET allowed
+172.67.139.19,ipv4,infrastructure,firewall log,Cloudflare edge address for overcoatpassably.shop; shared address, block the domain not the IP
+104.21.94.177,ipv4,infrastructure,VirusTotal DNS records,Cloudflare edge address for overcoatpassably.shop
+Dylan,hostname,affected,LetsDefend alert,172.16.17.216; user pasted and executed the command
+172.16.17.216,ipv4-internal,affected,LetsDefend alert,host address of Dylan
+dylan@letsdefend.io,email-recipient,affected,LetsDefend alert,recipient of the phishing message
+mshta.exe,process,abused,endpoint process list,signed Windows binary used to execute remote HTA content
