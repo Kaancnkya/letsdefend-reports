@@ -8,7 +8,7 @@ step is recorded with its reason, indicators are mapped to MITRE ATT&CK, and the
 with the evidence that supports it.
 
 <!-- metrics:start -->
-**2** alerts triaged · **2** incident reports published
+**3** alerts triaged · **3** incident reports published
 <!-- metrics:end -->
 
 ## Case index
@@ -17,6 +17,7 @@ with the evidence that supports it.
 | Date | Case | Topic | Verdict |
 |---|---|---|---|
 | 2026-07-26 | [`SOC338`](./cases/2026-07-26_SOC338-lumma-stealer-clickfix-phishing/report.md) | lumma stealer clickfix phishing | True Positive |
+| 2026-07-26 | [`SOC176`](./cases/2026-07-26_SOC176-rdp-brute-force/report.md) | rdp brute force | True Positive |
 | 2026-07-25 | [`SOC153`](./cases/2026-07-25_SOC153-suspicious-powershell-script-executed/report.md) | suspicious powershell script executed | True Positive |
 <!-- cases:end -->
 

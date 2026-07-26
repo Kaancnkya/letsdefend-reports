@@ -1,0 +1,5 @@
+indicator,type,verdict,source,notes
+218.92.0.56,ipv4,malicious,VirusTotal + AbuseIPDB,known SSH/RDP brute-force attacker; APNIC range (China); source of the attack
+172.16.17.148,ipv4-internal,compromised,LetsDefend alert,host "Matthew"; successful RDP logon by the attacker
+Matthew,username,compromised,Windows Event 4624,valid account; password guessed via brute force; Logon Type 10 (RDP)
+3389,port,n/a,firewall log,RDP exposed to the source; entry vector
